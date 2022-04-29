@@ -1,0 +1,14 @@
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
+.connect {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.hLinks{
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}

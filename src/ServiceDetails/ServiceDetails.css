@@ -1,0 +1,13 @@
+.cardImg {
+  max-width: 100vw;
+  max-height: 100vw;
+}
+.all {
+  width: 100%;
+  height: 30vh;
+  object-fit: contain;
+  width: 100%;
+}
+.details {
+  /* width: 100%; */
+}
