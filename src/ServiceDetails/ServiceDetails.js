@@ -13,13 +13,22 @@ const ServiceDetails = ({ product }) => {
 
           <div>
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>{name}</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                <p>{description}</p>
+                <p>
+                  <b> Supplier:</b> {supplierName}
+                </p>
+                <p>
+                  <b>Price: </b>
+                  {price}
+                </p>
+                <p>
+                  <b>Quantity: {quantity}</b>
+                </p>
               </Card.Text>
               <Button onClick={"/login"} variant="primary">
-                Go somewhere
+                UPDATE STOCK
               </Button>
             </Card.Body>
           </div>

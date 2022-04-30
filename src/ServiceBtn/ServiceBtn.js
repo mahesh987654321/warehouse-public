@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ServiceDetails from "../../ServiceDetails/ServiceDetails";
-import "./Service.css";
-const Services = () => {
+import ServiceDetails from "../ServiceDetails/ServiceDetails";
+
+const ServiceBtn = () => {
   const [service, setService] = useState([]);
   useEffect(() => {
     fetch("data.json")
@@ -14,17 +14,15 @@ const Services = () => {
         <h2>Our Products(Inventories)</h2>
       </div>
       <div className="service container">
-        {service.slice(0,6).map((product) => (
+        {service.map((product) => (
           <ServiceDetails product={product}></ServiceDetails>
         ))}
       </div>
-      <div className=" mx-auto d-flex justify-content-center">
-        <button className="btnn text-center w-50 mx-auto mt-5 mb-5">
-          See All
-        </button>
+      <div className=" x-auto d-flex justify-content-center">
+        
       </div>
     </div>
   );
 };
 
-export default Services;
+export default ServiceBtn;

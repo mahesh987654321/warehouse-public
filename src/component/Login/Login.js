@@ -1,74 +1,71 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Button, Form } from "react-bootstrap";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import auth from "../firebaseInit";
 import "./Login.css";
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error1, setError1] = useState("");
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  let errorElement;
+  const navigate = useNavigate();
+  const handelEmail = (event) => {
+    setEmail(event.target.value);
+  };
+  const handelPassword = (event) => {
+    setPassword(event.target.value);
+  };
+  const handelButton = (event) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(email, password);
+    if (email !== password) {
+      setError1("Something wrong");
+      return;
+    }
+  };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (user) {
+    navigate(from, { replace: true });
+  }
+  if (error) {
+    errorElement = <p className="text-danger">Error: {error?.message}</p>;
+  }
   return (
-    <div>
-      <div class="form-body">
-        <div class="row">
-          <div class="form-holder">
-            <div class="form-content">
-              <div class="form-items">
-                <h3>Register Today</h3>
-                <p>Fill in the data below.</p>
-                <form class="requires-validation">
-                  <div class="col-md-12">
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="name"
-                      placeholder="Full Name"
-                      required
-                    />
-                    <div class="valid-feedback">Username field is valid!</div>
-                    <div class="invalid-feedback">
-                      Username field cannot be blank!
-                    </div>
-                  </div>
+    <div className="bg">
+      <Form onSubmit={handelButton} className="w-50 mt-5 mx-auto">
+        <h2 className="text-center">Login Here</h2>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            onBlur={handelEmail}
+            type="email"
+            placeholder="Enter email"
+          />
+        </Form.Group>
 
-                  <div class="col-md-12">
-                    <input
-                      class="form-control"
-                      type="email"
-                      name="email"
-                      placeholder="E-mail Address"
-                      required
-                    />
-                    <div class="valid-feedback">Email field is valid!</div>
-                    <div class="invalid-feedback">
-                      Email field cannot be blank!
-                    </div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <input
-                      class="form-control"
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                      required
-                    />
-                    <div class="valid-feedback">Password field is valid!</div>
-                    <div class="invalid-feedback">
-                      Password field cannot be blank!
-                    </div>
-                  </div>
-
-                  <div class="form-button mt-3">
-                    <button id="submit" type="submit" class="btn btn-primary">
-                      Register
-                    </button>
-                    <Link to={"/login"}>Already have a Account </Link>
-                  </div>
-                  <div>
-                    <p>Social</p>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            onBlur={handelPassword}
+            type="password"
+            placeholder="Password"
+          />
+        </Form.Group>
+        {errorElement}
+        <p>{error1}</p>
+        <Link to="/regester">Please Regester</Link>
+        <Button className="w-100" variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     </div>
   );
 };
