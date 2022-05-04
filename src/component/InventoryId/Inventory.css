@@ -1,0 +1,21 @@
+.invClas {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+/* .flxCls {
+  display: flex;
+  justify-content: center;
+} */
+.gridClas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.partClas {
+  display: grid;
+  grid-template-columns: 5fr, 1fr;
+}
+.scncCls{
+    background-color: rgb(186, 148, 148);
+}

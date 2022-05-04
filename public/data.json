@@ -4,6 +4,7 @@
     "supplierName": "Asus Bangladesh",
     "price": 674000,
     "quantity": 5,
+    "email": "maheshbiswas1@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTxrFkrnCr6ClKx7QykLYqh1Jeojg7Vs9zbQ&usqp=CAU"
   },
@@ -12,6 +13,7 @@
     "supplierName": "APPLE Bangladesh",
     "price": 730800,
     "quantity": 9,
+    "email": "maheshbiswas2@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "data:image/jpeg;base64,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"
   },
@@ -20,6 +22,7 @@
     "supplierName": "HP Bangladesh",
     "price": 824000,
     "quantity": 9,
+    "email": "maheshbiswas3@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://images.hindustantimes.com/tech/img/2021/12/17/960x540/DSC_1300_1639757802261_1639757843934.jpg"
   },
@@ -28,6 +31,7 @@
     "supplierName": "LENEVO Bangladesh",
     "price": 236000,
     "quantity": 3,
+    "email": "maheshbiswas4@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://images.unsplash.com/photo-1625831463095-3330e301730c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGVub3ZvJTIwdGhpbmtwYWR8ZW58MHx8MHx8&w=1000&q=80"
   },
@@ -36,6 +40,7 @@
     "supplierName": "DELL Bangladesh",
     "price": 502000,
     "quantity": 6,
+    "email": "maheshbiswas5@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://cdn.mos.cms.futurecdn.net/kNttmdsRnYTKTeVfk946i4-1200-80.jpg"
   },
@@ -44,6 +49,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas6@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://static-01.daraz.com.bd/p/mdc/c356150afca6edde1b6685a160c10fcc.jpg"
   },
@@ -52,6 +58,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas7@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://s3.envato.com/files/7966c28a-0f25-414d-8b2c-d7d99ab11dcc/inline_image_preview.jpg"
   },
@@ -60,6 +67,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas8@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://www.cnet.com/a/img/resize/3599cd5e2e3a7423a49de0da1a9de2a84e8e3d16/hub/2018/02/13/517fda12-de2a-4c3f-bee5-05daaf870537/01laptops-with-longest-battery-life-2018-feb.jpg?auto=webp&width=1092"
   },
@@ -68,6 +76,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas9@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://s.yimg.com/uu/api/res/1.2/Z7jFGzCKLpv3m2N5uRi12Q--~B/aD0xMzAwO3c9MjAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-11/a179f550-3b11-11ec-86df-fa28310e5588.cf.jpg"
   },
@@ -76,6 +85,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas10@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/latitude_family/franchise/pdp/laptop-latitude-franchise-mod-2a-family-launch-thumb-1280x720.jpg?fmt=jpg"
   },
@@ -84,6 +94,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas11@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://www.cnet.com/a/img/resize/f9e4912a9dfe3a42128060832a4482351db568ac/hub/2016/02/03/28461403-81df-4bc3-ae3b-6847dc7da34a/hp-envy-laptop-0875-032.jpg?auto=webp&width=1092"
   },
@@ -92,6 +103,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas12@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://assets.videomaker.com/2022/03/New-laptops-primary.jpg"
   },
@@ -100,6 +112,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas13@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://techspective.net/wp-content/uploads/2017/10/MSSurface_15-modes.jpg"
   },
@@ -108,6 +121,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas14@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://cdn.arstechnica.net/wp-content/uploads/2022/01/final.jpg"
   },
@@ -116,6 +130,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas15@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://m.media-amazon.com/images/I/61hluo4o2RL._AC_SL1500_.jpg"
   },
@@ -124,6 +139,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas16@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://s.yimg.com/uu/api/res/1.2/NVx3iijOkY6GsTUJNkGIAg--~B/aD0xMjAwO3c9MjAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-07/7e73d400-df2b-11eb-8b7d-224d93864217.cf.jpg"
   },
@@ -132,6 +148,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas17@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://www.gulf-insider.com/wp-content/uploads/2020/10/dims.jpg"
   },
@@ -140,6 +157,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas18@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqdFAJpGkar0TY7KJrnHO3aTTDgkKAlCLXSUwNRARW24QcSZQPKPoWEhhCUahGErVoHE4&usqp=CAU"
   },
@@ -148,6 +166,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas19@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://nairobicomputershop.co.ke/media/categories/LAPTOPS.jpg"
   },
@@ -156,6 +175,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas20@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://assets-prd.ignimgs.com/2022/04/20/alienwarelaptop-1650471128761.jpg"
   },
@@ -164,6 +184,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas21@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/laptops/14s.jpg"
   },
@@ -172,6 +193,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas22@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://www.google.com/chromebook/assets-2019/static/images/home/hero-background.jpg"
   },
@@ -180,6 +202,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas23@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://imageio.forbes.com/specials-images/imageserve/6075baf74b38d32857ebb797/ASUS-Vivobook-14-laptop/0x0.jpg?fit=crop&format=jpg&crop=1588,1059,x68,y0,safe"
   },
@@ -188,6 +211,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas24@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/CK3RDQC2I5ACFOY5F3VFRN7XAA.jpg"
   },
@@ -196,6 +220,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas25@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://i.insider.com/61a92e735d47cc0018e9153e?width=700"
   },
@@ -204,6 +229,7 @@
     "supplierName": "WALTON Bangladesh",
     "price": 307000,
     "quantity": 6,
+    "email": "maheshbiswas26@gmail.com",
     "description": "We are the WholeSeller, You can collect Lsatops for Your Store.",
     "image": "https://icdn.digitaltrends.com/image/digitaltrends/macbook-pro-2021-16-720x720.jpg"
   }

@@ -1,8 +1,5 @@
-// import { Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import HomePage from "./component/HomePage/HomePage";
-
 import Blogs from "./component/Blogs/Blogs";
 import Login from "../src/component/Login/Login";
 import { Route, Routes } from "react-router-dom";
@@ -10,30 +7,35 @@ import Header from "./component/Header/Header";
 import Regester from "./component/Regester/Regester";
 import RequireAuth from "./component/RequireAuth/RequireAuth";
 import Order from "./component/Order/Order";
-import Inventory from "./component/Inventory/Inventory";
 import ManageItem from "../src/component/ManageItem/ManageItem";
-import AddItem from "./component/AddItem/AddItem";
+
 import MyItem from "./component/MyItem/MyItem";
-import ServiceBtn from "./ServiceBtn/ServiceBtn";
+import All from "./All/All";
+import InventoryId from "./component/InventoryId/InventoryId";
+import Forms from "./Forms/Forms";
+import UpdateInfo from "./UpdateInfo/UpdateInfo";
+import AddNew from "./component/AddNew/AddNew";
+import First from "./Extra/First/First";
+import Sercond from "./Extra/Second/Sercond";
 function App() {
   return (
     <div className="App">
-      {/* <HomePage></HomePage> */}
       <Header></Header>
       <Routes>
         <Route path="/" element={<HomePage></HomePage>}></Route>
         <Route path="/regester" element={<Regester></Regester>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/inventory" element={<Inventory></Inventory>}></Route>
+        <Route path="/service" element={<Forms></Forms>}></Route>
+        {/* <Route
+          path="/inventory-details/:id"
+          element={<InventoryId></InventoryId>}
+        ></Route> */}
         <Route
-          path="service/:id"
-          element={
-            <RequireAuth>
-              <ServiceBtn></ServiceBtn>
-            </RequireAuth>
-          }
+          path="/inventory/:id"
+          element={<InventoryId></InventoryId>}
         ></Route>
+
         <Route
           path="/manage"
           element={
@@ -50,27 +52,17 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route
-          path="/add"
-          element={
-            <RequireAuth>
-              <AddItem></AddItem>
-            </RequireAuth>
-          }
-        ></Route>
-        <Route
-          path="/my"
-          element={
-            <RequireAuth>
-              <MyItem></MyItem>
-            </RequireAuth>
-          }
-        ></Route>
+
+        <Route path="/update/:id" element={<UpdateInfo></UpdateInfo>}></Route>
+        <Route path="/add/:id" element={<AddNew />}></Route>
+        <Route path="/first" element={<First />}></Route>
+        <Route path="/second" element={<Sercond></Sercond>}></Route>
+        <Route path="/my" element={<MyItem></MyItem>}></Route>
       </Routes>
-      {/* 
+
       <Routes>
-        <Route path="/login" element={<Login></Login>}></Route>
-      </Routes> */}
+        <Route path="/all" element={<All></All>}></Route>
+      </Routes>
     </div>
   );
 }

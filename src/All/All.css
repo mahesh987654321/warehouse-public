@@ -1,0 +1,19 @@
+.many {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.part {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+.second {
+  background-color: rgb(124, 86, 86);
+  
+}
+/* .p{
+position: sticky;
+} */
