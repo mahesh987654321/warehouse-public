@@ -35,6 +35,7 @@ const MyItem = () => {
         },
       });
       setOrder(data);
+      // console.log(data);
     };
     getOrders();
   }, [user]);

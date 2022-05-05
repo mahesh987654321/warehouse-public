@@ -17,7 +17,7 @@ const InventoryId = () => {
 
   const { id } = useParams();
   const [inventory, setInventory] = useState({});
-  console.log(inventory.quantity);
+
   useEffect(() => {
     fetch(`http://localhost:5000/service/${id}`)
       .then((res) => res.json())
@@ -26,18 +26,16 @@ const InventoryId = () => {
   const handelForm = (event) => {
     event.preventDefault();
     setInput(input);
-    const plus = parseInt(inventory.quantity) + parseInt(input);
-    // console.log(plus);
-    let quantity = event.target.name.value;
-    // quantity = quantity - 1;
+    const plus = parseInt(inventory.quantity);
+    let quantity = parseInt(event.target.name.value) + parseInt(plus);
+    console.log(update);
     const updateUser = { quantity };
-    console.log(updateUser);
     fetch(`http://localhost:5000/service/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(updateUser, plus),
+      body: JSON.stringify(updateUser),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -77,11 +75,14 @@ const InventoryId = () => {
             </p>
             <p>
               <b>Quantity : </b>
-              {parseInt(inventory.quantity) + parseInt(input) ||
-                inventory.quantity - update.length}
+              {parseInt(inventory.quantity) + parseInt(input)}
+              <p>
+                <b>Quantity After Delivary:</b>{" "}
+                {inventory.quantity - update.length}
+              </p>
             </p>
             <p>
-              <b>Quantity :{inventory.quantity} </b>
+              {/* <b>Quantity :{inventory.quantity} </b> */}
               {/* {inventory.quantity - update.length} */}
             </p>
             <p>
@@ -113,7 +114,8 @@ const InventoryId = () => {
 
               <p>
                 Plus:
-                {parseInt(inventory.quantity) + parseInt(input)}
+                {parseInt(inventory.quantity) + parseInt(input) - 1}
+                <p> inventory {inventory.quantity - input - 1}</p>
               </p>
               <Button variant="primary" type="submit">
                 Submit
