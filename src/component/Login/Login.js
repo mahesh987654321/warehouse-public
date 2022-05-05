@@ -24,9 +24,9 @@ const Login = () => {
   const handelButton = async (event) => {
     event.preventDefault();
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios.post(`http://localhost:5000/login`, { email });
-    localStorage.setItem("accessToken", data.accessToken);
-    navigate(from, { replace: true });
+    // const { data } = await axios.post(`http://localhost:5000/login`, { email });
+    // localStorage.setItem("accessToken", data.accessToken);
+    // navigate(from, { replace: true });
     if (email !== password) {
       setError1("Something wrong");
       return;
@@ -37,7 +37,7 @@ const Login = () => {
     return <p>Loading...</p>;
   }
   if (user) {
-    // navigate(from, { replace: true });
+    navigate(from, { replace: true });
   }
   if (error) {
     errorElement = <p className="text-danger">Error: {error?.message}</p>;

@@ -20,13 +20,19 @@ const All = ({ _id }) => {
   };
   const navigate = useNavigate();
   const handelNew = (id) => {
-    console.log(id);
     navigate(`/service`);
+  };
+  const handelOrder = (id) => {
+    console.log(id);
+    navigate(`/order`);
   };
   return (
     <div>
       <button onClick={() => handelNew()} className="allBtn">
         Add new
+      </button>
+      <button onClick={() => handelOrder()} className="allBtn">
+        Add order
       </button>
       <div className="part">
         <div className="many">

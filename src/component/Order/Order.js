@@ -1,7 +1,12 @@
-import React from "react";
+// import React from 'react';
 
-const Order = () => {
-  return <div>this os order</div>;
-};
+// const Order = () => {
+//   const [order]
+//   return (
+//     <div>
+      
+//     </div>
+//   );
+// };
 
-export default Order;
+// export default Order;

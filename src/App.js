@@ -8,7 +8,6 @@ import Regester from "./component/Regester/Regester";
 import RequireAuth from "./component/RequireAuth/RequireAuth";
 import Order from "./component/Order/Order";
 import ManageItem from "../src/component/ManageItem/ManageItem";
-
 import MyItem from "./component/MyItem/MyItem";
 import All from "./All/All";
 import InventoryId from "./component/InventoryId/InventoryId";
@@ -17,6 +16,7 @@ import UpdateInfo from "./UpdateInfo/UpdateInfo";
 import AddNew from "./component/AddNew/AddNew";
 import First from "./Extra/First/First";
 import Sercond from "./Extra/Second/Sercond";
+import NotFound from "./NotFound/NotFound";
 function App() {
   return (
     <div className="App">
@@ -27,10 +27,7 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/service" element={<Forms></Forms>}></Route>
-        {/* <Route
-          path="/inventory-details/:id"
-          element={<InventoryId></InventoryId>}
-        ></Route> */}
+
         <Route
           path="/inventory/:id"
           element={<InventoryId></InventoryId>}
@@ -44,20 +41,14 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route
-          path="/order"
-          element={
-            <RequireAuth>
-              <Order></Order>
-            </RequireAuth>
-          }
-        ></Route>
+        <Route path="/order" element={<Order></Order>}></Route>
 
         <Route path="/update/:id" element={<UpdateInfo></UpdateInfo>}></Route>
         <Route path="/add/:id" element={<AddNew />}></Route>
         <Route path="/first" element={<First />}></Route>
         <Route path="/second" element={<Sercond></Sercond>}></Route>
         <Route path="/my" element={<MyItem></MyItem>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
 
       <Routes>

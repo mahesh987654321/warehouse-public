@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const MyDetails = ({ product }) => {
-  const { email } = product;
+const MyDetails = () => {
   return (
     <div>
-      <p>Email is: {email}</p>
+      
     </div>
   );
 };

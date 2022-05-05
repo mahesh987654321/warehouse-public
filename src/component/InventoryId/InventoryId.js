@@ -17,7 +17,7 @@ const InventoryId = () => {
 
   const { id } = useParams();
   const [inventory, setInventory] = useState({});
-
+  console.log(inventory.quantity);
   useEffect(() => {
     fetch(`http://localhost:5000/service/${id}`)
       .then((res) => res.json())
@@ -26,14 +26,18 @@ const InventoryId = () => {
   const handelForm = (event) => {
     event.preventDefault();
     setInput(input);
-    const quantity = event.target.name.value;
+    const plus = parseInt(inventory.quantity) + parseInt(input);
+    // console.log(plus);
+    let quantity = event.target.name.value;
+    // quantity = quantity - 1;
     const updateUser = { quantity };
+    console.log(updateUser);
     fetch(`http://localhost:5000/service/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(updateUser),
+      body: JSON.stringify(updateUser, plus),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -73,11 +77,12 @@ const InventoryId = () => {
             </p>
             <p>
               <b>Quantity : </b>
-              {parseInt(inventory.quantity) + parseInt(input)}
+              {parseInt(inventory.quantity) + parseInt(input) ||
+                inventory.quantity - update.length}
             </p>
             <p>
-              <b>Quantity : </b>
-              {inventory.quantity - update.length}
+              <b>Quantity :{inventory.quantity} </b>
+              {/* {inventory.quantity - update.length} */}
             </p>
             <p>
               <b>Description : </b>
@@ -108,7 +113,7 @@ const InventoryId = () => {
 
               <p>
                 Plus:
-                {parseInt(inventory.quantity + parseInt(input))}
+                {parseInt(inventory.quantity) + parseInt(input)}
               </p>
               <Button variant="primary" type="submit">
                 Submit
