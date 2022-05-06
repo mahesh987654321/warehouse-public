@@ -48,11 +48,8 @@ function App() {
         <Route path="/first" element={<First />}></Route>
         <Route path="/second" element={<Sercond></Sercond>}></Route>
         <Route path="/my" element={<MyItem></MyItem>}></Route>
-        <Route path="*" element={<NotFound></NotFound>}></Route>
-      </Routes>
-
-      <Routes>
         <Route path="/all" element={<All></All>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

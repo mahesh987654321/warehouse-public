@@ -22,7 +22,7 @@ const ServiceDetails = ({ product }) => {
       <div className="container all mt-5 mb-5">
         <Card className="details">
           <div className="cardImg">
-            <Card.Img className="" variant="top" src={image} />
+            <Card.Img className="card-img-top" variant="top" src={image} />
           </div>
 
           <div>

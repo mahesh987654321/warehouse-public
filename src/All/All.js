@@ -28,9 +28,9 @@ const All = ({ _id }) => {
   };
   return (
     <div>
-      <button onClick={() => handelNew()} className="allBtn">
+      {/* <button onClick={() => handelNew()} className="allBtn">
         Add new
-      </button>
+      </button> */}
       <button onClick={() => handelOrder()} className="allBtn">
         Add order
       </button>

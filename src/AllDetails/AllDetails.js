@@ -97,6 +97,7 @@ const AllDetails = ({ product, handelbtn }) => {
     email,
   } = product;
   const [service, setService] = Hooks();
+
   const handelClk = (id) => {
     console.log("clk");
     const sure = window.confirm("Are you sure eto confirm delete");
