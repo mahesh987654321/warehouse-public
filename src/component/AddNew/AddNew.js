@@ -5,9 +5,7 @@ import Forms from "../../Forms/Forms";
 const AddNew = () => {
   return (
     <div>
-      <p>
-        {/* <Forms></Forms> */}
-      </p>
+      <p></p>
     </div>
   );
 };

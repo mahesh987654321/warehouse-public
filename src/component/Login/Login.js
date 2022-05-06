@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+  useSendPasswordResetEmail,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../firebaseInit";
 import "./Login.css";
 const Login = () => {
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
   const [email, setEmail] = useState("");
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [password, setPassword] = useState("");
   const [error1, setError1] = useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+    useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   let errorElement;
@@ -18,6 +24,7 @@ const Login = () => {
   const handelEmail = (event) => {
     setEmail(event.target.value);
   };
+  console.log();
   const handelPassword = (event) => {
     setPassword(event.target.value);
   };
@@ -65,6 +72,20 @@ const Login = () => {
         </Form.Group>
         {errorElement}
         <p>{error1}</p>
+        <button
+          onClick={() => signInWithGoogle()}
+          className="bg-dark text-white"
+        >
+          Sign in with Google
+        </button>
+        <button
+          onClick={async () => {
+            await sendPasswordResetEmail(email);
+            alert("Sent email");
+          }}
+        >
+          Reset password
+        </button>
         <Link to="/regester">Please Regester</Link>
         <Button className="w-100" variant="primary" type="submit">
           Submit

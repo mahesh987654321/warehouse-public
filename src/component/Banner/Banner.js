@@ -1,9 +1,10 @@
 import React from "react";
-import './Banner.css'
+
+import "./Banner.css";
 const Banner = () => {
   return (
     <div className="container">
-      <h3 className="center">WE ARE PROVIDING BEST LAPTOP FOR YOUR STORE   </h3>
+      <h3 className="center">WE ARE PROVIDING BEST LAPTOP FOR YOUR STORE </h3>
       <img
         className="w-100"
         src={

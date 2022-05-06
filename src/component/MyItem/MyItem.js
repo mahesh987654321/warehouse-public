@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+
 import auth from "../firebaseInit";
 import OrderDetails from "../Order/OrderDetails";
 
 const MyItem = () => {
   const [order, setOrder] = useState([]);
   const [user] = useAuthState(auth);
+
   useEffect(() => {
     const getOrders = async () => {
       const email = user.email;
@@ -16,6 +18,7 @@ const MyItem = () => {
     };
     getOrders();
   }, [user, order]);
+  
   return (
     <div>
       {order.map((order) => (

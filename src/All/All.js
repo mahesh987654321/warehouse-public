@@ -6,8 +6,11 @@ import AllDetails from "../AllDetails/AllDetails";
 import Forms from "../Forms/Forms";
 
 import "./All.css";
+
 const All = ({ _id }) => {
+  const navigate = useNavigate();
   const [cart, setCart] = useState([]);
+  // const [loading] = useAuthState(auth);
   const [service, setService] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/service`)
@@ -18,7 +21,7 @@ const All = ({ _id }) => {
     const newCart = [...cart, event];
     setCart(newCart);
   };
-  const navigate = useNavigate();
+
   const handelNew = (id) => {
     navigate(`/service`);
   };

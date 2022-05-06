@@ -83,6 +83,7 @@ import { useNavigate } from "react-router-dom";
 import Hooks from "../Hooks/Hooks";
 import "./AllDetails.css";
 import "../Forms/Forms";
+import { Button, Card } from "react-bootstrap";
 const { ToastContainer } = require("react-toastify");
 const AllDetails = ({ product, handelbtn }) => {
   const navigate = useNavigate();
@@ -123,22 +124,35 @@ const AllDetails = ({ product, handelbtn }) => {
   };
   return (
     <div>
-      <div className="max">
-        <div>
-          <img className="images" src={image} alt="" />
-        </div>
-        <div>
-          <div>
-            <div>
-              <p>Name: {name}</p>
-              <p>SupplierName: {supplierName}</p>
-              <p>Price: {price}</p>
-              <p>Quantity: {quantity}</p>
-              <p>Quantity: {email}</p>
-              <p>Description: {description}</p>
-            </div>
-          </div>
-          <div className="d-flex justify-content-between">
+      <Card style={{ width: "18rem" }}>
+        <img class="card-img-top img-fluid" src={image} alt="" />
+        <Card.Body>
+          <Card.Title>
+            {" "}
+            <b>Name:</b> {name}
+          </Card.Title>
+          <Card.Text>
+            {" "}
+            <b>Supplier Name:</b> {supplierName}
+          </Card.Text>
+          <Card.Text>
+            {" "}
+            <b>Description:</b> {description}
+          </Card.Text>
+          <Card.Text>
+            {" "}
+            <b>Price:</b> {price}
+          </Card.Text>
+          <Card.Text>
+            {" "}
+            <b>Quantity:</b> {quantity}
+          </Card.Text>
+          <Card.Text>
+            {" "}
+            <b>Email:</b> {email}
+          </Card.Text>
+          {/* <Button variant="primary">Go somewhere</Button> */}
+          <div className="d-flex justify-content-between clas">
             <button onClick={() => handelbtn(_id)} className="allBtn">
               ADD TO CART
             </button>
@@ -149,8 +163,8 @@ const AllDetails = ({ product, handelbtn }) => {
               Update Stock
             </button>
           </div>
-        </div>
-      </div>
+        </Card.Body>
+      </Card>
     </div>
   );
 };

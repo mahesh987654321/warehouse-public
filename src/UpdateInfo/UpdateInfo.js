@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../component/InventoryId/Inventory.css";
+import InventoryId from "../component/InventoryId/InventoryId";
 const UpdateInfo = () => {
   const { id } = useParams();
 
@@ -12,7 +13,7 @@ const UpdateInfo = () => {
   }, [id]);
   return (
     <div className="partClas container">
-      <div className="container gridClas">
+      {/* <div className="container gridClas">
         <div className="flxCls mt-5">
           <img className="invClas" src={inventory.image} alt="" />
         </div>
@@ -43,7 +44,8 @@ const UpdateInfo = () => {
         <p>Total Quantity is: {inventory.quantity}</p>
 
         <button>Dalevered</button>
-      </div>
+      </div> */}
+      <InventoryId></InventoryId>
     </div>
   );
 };

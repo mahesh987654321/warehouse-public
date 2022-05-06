@@ -1,18 +1,18 @@
-
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
+  useSendPasswordResetEmail,
 } from "react-firebase-hooks/auth";
-import './Regester.css'
+import "./Regester.css";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../firebaseInit";
 
-
 const Regester = () => {
-  const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, user2] = useSignInWithGoogle(auth);
   const [email, setEmail] = useState("");
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
   const [password, setPassword] = useState("");
   const [conpass, setConpass] = useState("");
   const [error1, setError] = useState("");
@@ -80,10 +80,19 @@ const Regester = () => {
         >
           Sign in with Google
         </button>
+        <button
+          onClick={async () => {
+            await sendPasswordResetEmail(email);
+            alert("Sent email");
+          }}
+        >
+          Reset password
+        </button>
         <Button className="w-100" variant="primary" type="submit">
           Submit
         </Button>
       </Form>
+      <p>Reg</p>
     </div>
   );
 };
