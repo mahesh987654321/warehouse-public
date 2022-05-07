@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebaseInit";
+import './orderDetails.css'
 const Order = () => {
   const [user] = useAuthState(auth);
   if (user) {
@@ -29,23 +30,49 @@ const Order = () => {
   return (
     <div className="w-50 mx-auto ">
       <form onSubmit={onHandelSubmit}>
-        <input type="text" name="name" placeholder="Enter Name" />
-        <br />
-        <input type="number" name="price" placeholder="Enter Price" />
-        <br />
-        <input type="number" name="quantity" placeholder="Enter Quantity" />
-        <br />
-        <input type="text" name="description" placeholder="Enter Description" />
+        <input
+          className="order"
+          type="text"
+          name="name"
+          placeholder="Enter Name"
+        />
         <br />
         <input
+          className="order"
+          type="number"
+          name="price"
+          placeholder="Enter Price"
+        />
+        <br />
+        <input
+          className="order"
+          type="number"
+          name="quantity"
+          placeholder="Enter Quantity"
+        />
+        <br />
+        <input
+          className="order"
+          type="text"
+          name="description"
+          placeholder="Enter Description"
+        />
+        <br />
+        <input
+          className="order"
           type="text"
           name="supplierName"
           placeholder="Enter supplierName"
         />
         <br />
-        <input type="email" name="email" value={user?.email} />
+        <input
+          className="order"
+          type="email"
+          name="email"
+          value={user?.email}
+        />
         <br />
-        <input type="submit" value="Submit" />
+        <input className="submit" type="submit" value="Submit" />
       </form>
     </div>
   );

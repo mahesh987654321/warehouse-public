@@ -16,6 +16,13 @@
   display: grid;
   grid-template-columns: 5fr, 1fr;
 }
-.scncCls{
-    background-color: rgb(186, 148, 148);
+.scncCls {
+  background-color: rgb(186, 148, 148);
+}
+
+@media only screen and (max-width: 600px) {
+  .gridClas {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

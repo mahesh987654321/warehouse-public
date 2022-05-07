@@ -123,7 +123,7 @@ const AllDetails = ({ product, handelbtn }) => {
     navigate(`/service`);
   };
   return (
-    <div>
+    <div className="grd">
       <Card style={{ width: "18rem" }}>
         <img class="card-img-top img-fluid" src={image} alt="" />
         <Card.Body>

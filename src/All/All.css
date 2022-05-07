@@ -12,8 +12,14 @@
 }
 .second {
   background-color: rgb(124, 86, 86);
-  
 }
 /* .p{
 position: sticky;
 } */
+
+@media only screen and (max-width: 600px) {
+  .many {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

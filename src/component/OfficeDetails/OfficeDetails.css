@@ -4,3 +4,9 @@
   justify-content: space-around;
   align-items: center;
 }
+@media only screen and (max-width: 600px) {
+  .office {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

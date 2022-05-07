@@ -17,6 +17,7 @@ import AddNew from "./component/AddNew/AddNew";
 import First from "./Extra/First/First";
 import Sercond from "./Extra/Second/Sercond";
 import NotFound from "./NotFound/NotFound";
+import About from "./About/About";
 function App() {
   return (
     <div className="App">
@@ -42,7 +43,7 @@ function App() {
           }
         ></Route>
         <Route path="/order" element={<Order></Order>}></Route>
-
+          <Route path="/about" element={<About></About>}></Route>
         <Route path="/update/:id" element={<UpdateInfo></UpdateInfo>}></Route>
         <Route path="/add/:id" element={<AddNew />}></Route>
         <Route path="/first" element={<First />}></Route>

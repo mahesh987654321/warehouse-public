@@ -32,12 +32,7 @@ const Header = () => {
                 <Link className="hLinks" to={"/blogs"}>
                   Blogs
                 </Link>
-                <Link className="hLinks" to={"/inventory"}>
-                  Inventory
-                </Link>
-                <Link className="hLinks" to={"/manage"}>
-                  Manage Item
-                </Link>
+
                 <Link className="hLinks" to={"/my"}>
                   My Item
                 </Link>
