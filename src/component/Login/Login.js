@@ -9,13 +9,14 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../firebaseInit";
 import "./Login.css";
+import Loading from "../../Loading/Loading";
 const Login = () => {
-  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+  const [sendPasswordResetEmail, loading] = useSendPasswordResetEmail(auth);
   const [email, setEmail] = useState("");
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [password, setPassword] = useState("");
   const [error1, setError1] = useState("");
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, user, loading1, error] =
     useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -28,6 +29,9 @@ const Login = () => {
   const handelPassword = (event) => {
     setPassword(event.target.value);
   };
+  if (loading || loading1) {
+    return <Loading></Loading>;
+  }
   const handelButton = async (event) => {
     event.preventDefault();
     await signInWithEmailAndPassword(email, password);
@@ -78,15 +82,18 @@ const Login = () => {
         >
           Sign in with Google
         </button>
-        <button
-          onClick={async () => {
-            await sendPasswordResetEmail(email);
-            alert("Sent email");
-          }}
-        >
-          Reset password
-        </button>
-        <Link to="/regester">Please Regester</Link>
+        <div className="d-flex justify-content-around align-items-center">
+          <p>Forgot Password</p>
+          <button
+            onClick={async () => {
+              await sendPasswordResetEmail(email);
+              alert("Sent email");
+            }}
+          >
+            Reset password
+          </button>
+        </div>
+        <Link to="/regester">Don't have a account Please Regester</Link>
         <Button className="w-100" variant="primary" type="submit">
           Submit
         </Button>

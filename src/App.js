@@ -43,12 +43,19 @@ function App() {
           }
         ></Route>
         <Route path="/order" element={<Order></Order>}></Route>
-          <Route path="/about" element={<About></About>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
         <Route path="/update/:id" element={<UpdateInfo></UpdateInfo>}></Route>
         <Route path="/add/:id" element={<AddNew />}></Route>
         <Route path="/first" element={<First />}></Route>
         <Route path="/second" element={<Sercond></Sercond>}></Route>
-        <Route path="/my" element={<MyItem></MyItem>}></Route>
+        <Route
+          path="/my"
+          element={
+            <RequireAuth>
+              <MyItem></MyItem>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/all" element={<All></All>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>

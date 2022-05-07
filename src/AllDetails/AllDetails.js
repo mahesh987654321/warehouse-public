@@ -83,8 +83,10 @@ import { useNavigate } from "react-router-dom";
 import Hooks from "../Hooks/Hooks";
 import "./AllDetails.css";
 import "../Forms/Forms";
+import "react-toastify/dist/ReactToastify.css";
+
 import { Button, Card } from "react-bootstrap";
-const { ToastContainer } = require("react-toastify");
+const { ToastContainer, toast } = require("react-toastify");
 const AllDetails = ({ product, handelbtn }) => {
   const navigate = useNavigate();
   const {
@@ -111,7 +113,8 @@ const AllDetails = ({ product, handelbtn }) => {
         .then((data) => {
           const remaining = service.filter((service) => service._id !== id);
           console.log(remaining);
-          if (data) {
+          if (remaining) {
+            toast("User deleted");
           }
         });
     }
@@ -124,6 +127,7 @@ const AllDetails = ({ product, handelbtn }) => {
   };
   return (
     <div className="grd">
+      <ToastContainer />
       <Card style={{ width: "18rem" }}>
         <img class="card-img-top img-fluid" src={image} alt="" />
         <Card.Body>

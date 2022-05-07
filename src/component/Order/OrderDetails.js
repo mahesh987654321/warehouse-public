@@ -13,7 +13,7 @@ const OrderDetails = ({ order }) => {
       setOrders(data);
     };
     getOrders();
-  }, []);
+  }, [order]);
   const handelDelete = (id) => {
     const sure = window.confirm("Are you sure eto confirm delete");
     if (sure) {
@@ -29,6 +29,18 @@ const OrderDetails = ({ order }) => {
           }
         });
     }
+
+    const url = `http://localhost:5000/service/${id}`;
+    fetch(url, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const remaining = orders.filter((order) => order._id !== id);
+        console.log(remaining);
+        if (data) {
+        }
+      });
   };
   return (
     <div>

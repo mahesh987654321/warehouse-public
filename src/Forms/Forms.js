@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import auth from "../component/firebaseInit";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 import MyItem from "../component/MyItem/MyItem";
 import Hooks from "../Hooks/Hooks";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -29,13 +31,14 @@ const Forms = ({ handelForm }) => {
       .then((result) => {
         setIsReload(!isReload);
         if (result) {
-          alert("Add Successful");
+          toast("Add Successful");
         }
       });
   };
 
   return (
     <div className="w-75 mx-auto">
+      <ToastContainer />
       <p className="text-center">ADD A SERVICE {services.length}</p>
       <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
         <input
@@ -82,7 +85,7 @@ const Forms = ({ handelForm }) => {
           className="mb-2"
           placeholder="Email"
           type="email"
-          // value={user.email}
+          value={user?.email}
           readOnly
           required
           disabled
