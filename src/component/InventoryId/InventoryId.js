@@ -51,8 +51,20 @@ const InventoryId = () => {
   };
   const handelUpdate = (event) => {
     // event.preventDefault();
-    inventory.quantity = inventory.quantity - 1;
+    const man = (inventory.quantity = inventory.quantity - 1);
     setOrder(inventory.quantity);
+    fetch(`https://safe-atoll-27421.herokuapp.com/service/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(man),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        toast("user Updated");
+        event.target.reset();
+      });
     console.log(order);
   };
   return (
@@ -109,7 +121,7 @@ const InventoryId = () => {
                   name="name"
                 />
               </Form.Group>
-              <p>After Adding is:{order}</p>
+              <p>After Adding is:{inventory.quantity}</p>
 
               <p>
                 Plus:

@@ -27,7 +27,7 @@ const Header = () => {
                   order
                 </Link>
                 <Link className="hLinks" to={"/service"}>
-                  Service
+                  Add Item
                 </Link>
                 <Link className="hLinks" to={"/blogs"}>
                   Blogs
