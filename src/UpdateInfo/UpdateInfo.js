@@ -7,7 +7,7 @@ const UpdateInfo = () => {
 
   const [inventory, setInventory] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    fetch(`https://safe-atoll-27421.herokuapp.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => setInventory(data));
   }, [id]);

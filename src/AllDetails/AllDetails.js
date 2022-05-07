@@ -105,7 +105,7 @@ const AllDetails = ({ product, handelbtn }) => {
     console.log("clk");
     const sure = window.confirm("Are you sure eto confirm delete");
     if (sure) {
-      const url = `http://localhost:5000/service/${id}`;
+      const url = `https://safe-atoll-27421.herokuapp.com/service/${id}`;
       fetch(url, {
         method: "DELETE",
       })

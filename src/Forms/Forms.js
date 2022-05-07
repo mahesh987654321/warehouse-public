@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import MyItem from "../component/MyItem/MyItem";
 import Hooks from "../Hooks/Hooks";
 import { useAuthState } from "react-firebase-hooks/auth";
-import useServiceDetails from "../UseServiceDetails/UseServiceDetails";
+// import useServiceDetails from "../UseServiceDetails/UseServiceDetails";
 import axios from "axios";
 const Forms = ({ handelForm }) => {
   const [user] = useAuthState(auth);
@@ -15,11 +15,11 @@ const Forms = ({ handelForm }) => {
   }
   const [isReload, setIsReload] = useState(false);
   const { register, handleSubmit } = useForm();
-  const { id } = useParams();
-  const [services] = useServiceDetails(id);
+  // const { id } = useParams();
+  // const [services] = useServiceDetails(id);
 
   const onSubmit = (data, event) => {
-    const url = `http://localhost:5000/service`;
+    const url = `https://safe-atoll-27421.herokuapp.com/service`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -39,7 +39,7 @@ const Forms = ({ handelForm }) => {
   return (
     <div className="w-75 mx-auto">
       <ToastContainer />
-      <p className="text-center">ADD A SERVICE {services.length}</p>
+      {/* <p className="text-center">ADD A SERVICE {services.length}</p> */}
       <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="mb-2"

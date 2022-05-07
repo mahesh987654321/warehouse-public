@@ -13,7 +13,7 @@ const All = ({ _id }) => {
   // const [loading] = useAuthState(auth);
   const [service, setService] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/service`)
+    fetch(`https://safe-atoll-27421.herokuapp.com/service`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [service]);

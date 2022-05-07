@@ -8,7 +8,7 @@ const OrderDetails = ({ order }) => {
 
   useEffect(() => {
     const getOrders = async () => {
-      const url = `http://localhost:5000/order`;
+      const url = `https://safe-atoll-27421.herokuapp.com/order`;
       const { data } = await axios.get(url);
       setOrders(data);
     };
@@ -17,7 +17,7 @@ const OrderDetails = ({ order }) => {
   const handelDelete = (id) => {
     const sure = window.confirm("Are you sure eto confirm delete");
     if (sure) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `https://safe-atoll-27421.herokuapp.com/order/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -30,7 +30,7 @@ const OrderDetails = ({ order }) => {
         });
     }
 
-    const url = `http://localhost:5000/service/${id}`;
+    const url = `https://safe-atoll-27421.herokuapp.com/service/${id}`;
     fetch(url, {
       method: "DELETE",
     })

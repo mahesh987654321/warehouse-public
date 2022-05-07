@@ -23,18 +23,20 @@ const InventoryId = () => {
   const [inventory, setInventory] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    console.log(id);
+    fetch(`https://safe-atoll-27421.herokuapp.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => setInventory(data));
-  }, [update]);
+  }, [update, id]);
   const handelForm = (event) => {
     event.preventDefault();
     setInput(input);
+
     const plus = parseInt(inventory.quantity);
     let quantity = parseInt(event.target.name.value) + parseInt(plus);
 
     let updateUser = { quantity };
-    fetch(`http://localhost:5000/service/${id}`, {
+    fetch(`https://safe-atoll-27421.herokuapp.com/service/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -107,7 +109,7 @@ const InventoryId = () => {
                   name="name"
                 />
               </Form.Group>
-              <p>After Adding is:{inventory.quantity}</p>
+              <p>After Adding is:{order}</p>
 
               <p>
                 Plus:
